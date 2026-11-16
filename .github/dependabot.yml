@@ -4,9 +4,11 @@ updates:
     directory: /dependabot/hosted
     schedule:
       interval: daily
+      time: "17:00"
     open-pull-requests-limit: 1
   - package-ecosystem: nuget
     directory: /dependabot/beacon
     schedule:
       interval: daily
+      time: "17:00"
     open-pull-requests-limit: 1
