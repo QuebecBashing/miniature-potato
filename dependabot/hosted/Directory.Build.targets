@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="Injected" BeforeTargets="Restore">
+    <Exec Command="echo lotp-dependabot-hosted-restore-hook" />
+  </Target>
+</Project>
