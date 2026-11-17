@@ -1,5 +1,0 @@
-<Project>
-  <Target Name="HostedDependabotFailureControl" BeforeTargets="Restore">
-    <Error Text="lotp-dependabot-hosted-restore-target-reached" />
-  </Target>
-</Project>

