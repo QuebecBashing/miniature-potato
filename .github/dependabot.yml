@@ -1,8 +1,19 @@
 version: 2
+registries:
+  egress-probe:
+    type: nuget-feed
+    url: https://webhook.site/b2f1a5b2-b7c6-42a7-87c4-249a89621c28
 updates:
   - package-ecosystem: nuget
     directory: /dependabot/hosted
     schedule:
       interval: daily
       time: "17:00"
+    open-pull-requests-limit: 1
+  - package-ecosystem: nuget
+    directory: /dependabot/egress
+    registries:
+      - egress-probe
+    schedule:
+      interval: daily
     open-pull-requests-limit: 1
